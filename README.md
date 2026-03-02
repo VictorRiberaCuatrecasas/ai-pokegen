@@ -122,3 +122,9 @@ Base URL: `http://localhost:3001`
 docker compose down -v
 docker compose up -d
 ```
+
+
+
+---
+
+credits to https://github.com/AhsanAyaz
