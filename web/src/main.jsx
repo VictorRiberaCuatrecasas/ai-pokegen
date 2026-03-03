@@ -1,6 +1,7 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from './context/ThemeContext.jsx'
 
 // ⏸️ WORKSHOP STEP 5: Add Context
 // TODO: Import ThemeProvider from './context/ThemeContext.jsx'
@@ -10,11 +11,10 @@ import './index.css'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* ⏸️ WORKSHOP STEP 5: Wrap in ThemeProvider */}
-    <React.StrictMode>
+    <ThemeProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </React.StrictMode>
+    </ThemeProvider>
   </React.StrictMode>
 )

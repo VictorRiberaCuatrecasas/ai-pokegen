@@ -1,11 +1,10 @@
 import { Link, NavLink } from 'react-router-dom'
 
 import ApiKeyPrompt from './ApiKeyPrompt.jsx'
+import { useTheme } from '../context/ThemeContext.jsx'
 
 export default function Header() {
-  // ⏸️ WORKSHOP STEP 5: Add Context
-  // TODO: Import and use useTheme hook here
-  // const { theme, toggleTheme } = useTheme()
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <header className="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-10 transition-colors">
@@ -41,15 +40,12 @@ export default function Header() {
               Gallery
             </NavLink>
           </nav>
-
-          {/* ⏸️ WORKSHOP STEP 5: Uncomment theme toggle */}
-          {/* <button
+          <button
             onClick={toggleTheme}
             className="p-2 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-            title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
-          >
+            title={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}>
             {theme === 'light' ? '🌙' : '☀️'}
-          </button> */}
+          </button>
         </div>
       </div>
     </header>
