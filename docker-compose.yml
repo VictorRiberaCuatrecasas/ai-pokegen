@@ -1,5 +1,6 @@
 services:
   db:
+    container_name: pokegen-db
     image: postgres:16
     environment:
       POSTGRES_USER: postgres
