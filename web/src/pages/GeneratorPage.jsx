@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Canvas from '../components/Canvas.jsx'
 import Spinner from '../components/Spinner.jsx'
+import { useApiKey } from '../context/ApiKeyContext.jsx'
 
 const API = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3001'
 
@@ -8,6 +9,7 @@ export default function GeneratorPage() {
   const [isGenerating, setIsGenerating] = useState(false)
   const [error, setError] = useState(null)
   const [lastResult, setLastResult] = useState(null)
+  const { apiKey } = useApiKey()
 
   const handleGenerate = async (base64) => {
     try {
@@ -16,7 +18,7 @@ export default function GeneratorPage() {
       const res = await fetch(`${API}/api/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ doodle_data: base64 }),
+        body: JSON.stringify({ doodle_data: base64, gemini_api_key: apiKey }),
       })
       if (!res.ok) throw new Error('Failed to generate')
       const json = await res.json()
