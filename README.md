@@ -1,4 +1,4 @@
-# PokAImon Generator 🧪🎨
+# PokAImon Generator 
 
 Full-stack app that generates AI-powered creatures from your doodles.
 
@@ -21,7 +21,7 @@ Full-stack app that generates AI-powered creatures from your doodles.
 
 ------------------------------------------------------------------------
 
-# 🚀 Quick Start
+#  Quick Start
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ Full-stack app that generates AI-powered creatures from your doodles.
 
 ------------------------------------------------------------------------
 
-## 1️⃣ Start Database & Cache
+## 1️ Start Database & Cache
 
 From the project root:
 
@@ -51,7 +51,7 @@ docker compose ps
 
 ------------------------------------------------------------------------
 
-## 2️⃣ Backend Setup
+## 2️ Backend Setup
 
 Create `server/.env`:
 
@@ -80,7 +80,7 @@ Health check:
 
 ------------------------------------------------------------------------
 
-## 3️⃣ Frontend Setup
+## 3️ Frontend Setup
 
 Create `client-tutorial/.env`:
 
@@ -102,7 +102,7 @@ Frontend runs at:
 
 ------------------------------------------------------------------------
 
-# 📡 API Endpoints
+#  API Endpoints
 
 Base URL: `http://localhost:3001`
 
